@@ -1,172 +1,185 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>罗丹 Rodin - Product Designer & AI Practitioner</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="noise-overlay"></div>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>罗丹 Rodin | Product Designer & AIGC Expert | 湖南工业大学</title>
+        <meta name="description" content="罗丹(Rodin Luo)的个人作品集。湖南工业大学IDL实验室主任，全栈产品设计师。擅长UI/UX设计、AIGC工作流、SaaS产品策划及iOS独立开发。查看我的老有所帮、茶宝IP等核心项目。">
+        <meta name="keywords" content="罗丹, Rodin Luo, 湖南工业大学, 工业设计, 产品经理, UI设计, AIGC, IDL实验室, 交互设计, 作品集">
+        <meta name="author" content="Rodin Luo">
+    
+        <meta property="og:title" content="罗丹 Rodin - Product & AI Designer">
+        <meta property="og:description" content="湖南工业大学 IDL 主任 | NCDA国赛获奖 | 探索设计与商业的边界">
+        <meta property="og:image" content="images/projects/silver-main.jpg"> <meta property="og:url" content="https://your-website-url.com">
+        <meta property="og:type" content="website">
+    
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "罗丹 Rodin Luo",
+          "url": "https://your-domain.com",
+          "jobTitle": "Product Designer",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "湖南工业大学 Hunan University of Technology"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "湖南工业大学"
+          },
+          "knowsAbout": ["Product Design", "AIGC", "UI/UX", "SEO", "SaaS"]
+        }
+        </script>
+    </head>
+<body class="loading">
+    <div class="loader">
+        <div class="loader-text">RODIN.DESIGN</div>
+    </div>
 
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="logo">RODIN.DESIGN</div>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">关于</a>
-                <a href="#projects" class="nav-link">项目</a>
-                <a href="#experience" class="nav-link">经历</a>
-                <a href="#awards" class="nav-link">荣誉</a>
-            </div>
+    <nav class="navbar">
+        <div class="logo">RODIN<span class="dot">.</span></div>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-name-wrapper">
-                    <h1 class="hero-name">RODIN <span class="stroke-text">LUO</span></h1>
-                </div>
-                <h2 class="hero-title">
-                    产品思维 <span class="slash">/</span> AIGC 实践 <span class="slash">/</span> 体验设计
-                </h2>
-                <p class="hero-desc">
-                    你好，我是罗丹。<strong>湖南工业大学 IDL 双创实验室主任</strong>。<br>
-                    我不止关注像素，更致力于解决 <strong>B端/C端</strong> 的商业痛点。<br>
-                    擅长利用 <strong>AIGC 工作流</strong> 提效，拥有从 <strong>SaaS策划</strong> 到 <strong>SEO增长</strong> 的全栈视野。
-                </p>
-                <div class="hero-tags">
-                    <span class="skill-tag">Product Manager Assistant</span>
-                    <span class="skill-tag">AIGC Workflow</span>
-                    <span class="skill-tag">SaaS Growth</span>
-                    <span class="skill-tag">CET-6 (508)</span>
-                </div>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">查看核心项目 <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>精选项目 <span class="dot">.</span></h2>
-                <p>商业落地 · AIGC创新 · 社会价值</p>
-            </div>
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
             
-            <div class="project-categories">
-                <button class="category-btn active" data-category="all">全部</button>
-                <button class="category-btn" data-category="product">产品/B端</button>
-                <button class="category-btn" data-category="aigc">AIGC/IP</button>
-                <button class="category-btn" data-category="social">社会创新</button>
-            </div>
-
-            <div class="projects-grid">
-                </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section experience">
-        <div class="container">
-            <div class="experience-grid">
-                <div class="exp-left">
-                    <div class="section-header text-left">
-                        <h2>经历与背景 <span class="dot">.</span></h2>
+            <section id="home" class="hero-section">
+                <div class="container">
+                    <h1 class="hero-title" data-speed="0.8">
+                        <div class="line">PRODUCT</div>
+                        <div class="line outlined">DESIGNER</div>
+                        <div class="line">& AIGC PRO.</div>
+                    </h1>
+                    
+                    <div class="hero-intro">
+                        <p>湖南工业大学 <strong>IDL双创实验室主任</strong></p>
+                        <p>专注解决 B端/C端 商业痛点，利用 AI 赋能设计。</p>
                     </div>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <span class="date">2024 - 至今</span>
-                            <h3>IDL 格物双创实验室 · 主任</h3>
-                            <p>带领团队获“年度优秀考核团队”。负责实验室项目管理、跨学科协作及创新创业竞赛孵化。</p>
+
+                    <div class="hero-tags" style="margin-top: 2rem; display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span class="skill-tag">Product Manager Assistant</span>
+                        <span class="skill-tag">AI Coding & Dev</span> 
+                        <span class="skill-tag">iOS App Launch</span>  
+                        <span class="skill-tag">AIGC Workflow</span>
+                        <span class="skill-tag">CET-6 (508)</span>
+                    </div>
+
+                    <div class="hero-cta magnetic-btn">
+                        <a href="#work" class="btn-circle">
+                            <span>EXPLORE <br> WORK</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="work" class="work-section">
+                <div class="container">
+                    <div class="section-label">SELECTED WORKS (2024-25)</div>
+                    <div class="project-list">
                         </div>
-                        <div class="timeline-item">
-                            <span class="date">2025.08 - 2025.09</span>
-                            <h3>快智科技 · 产品/设计实习生</h3>
-                            <p>负责移动端产品迭代设计，主导 App Store 上架素材优化及 SEO 外链策略，有效提升产品可见度。</p>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">2023 - 至今</span>
-                            <h3>湖南工业大学 · 班长/预备党员</h3>
-                            <p>综测成绩专业年级 Top 3，多次获得校级奖学金。青马工程优秀学员。</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="exp-right">
-                    <div class="skills-box">
-                        <h3>核心技能栈</h3>
-                        <div class="skill-tags-cloud">
-                            <span>Figma</span><span>MasterGo</span><span>Midjourney</span>
-                            <span>Stable Diffusion</span><span>HTML/CSS</span><span>SEO</span>
-                            <span>产品文档PRD</span><span>数据分析</span>
-                        </div>
-                        <canvas id="skillsChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="awards" class="section awards">
-        <div class="container">
-            <div class="section-header">
-                <h2>荣誉奖项 <span class="dot">.</span></h2>
-            </div>
-            <div class="awards-grid">
-                <div class="award-card highlight">
-                    <div class="award-icon"><i class="fas fa-crown"></i></div>
-                    <div class="award-info">
-                        <h4>NCDA 全国高校数字艺术设计大赛</h4>
-                        <span class="rank">全国总决赛三等奖</span>
-                        <p class="project">作品：MammoEase</p>
+            <section id="about" class="about-section">
+                <div class="container">
+                    <div class="marquee-wrapper">
+                        <div class="marquee-text">LEADERSHIP · AIGC · GROWTH · STRATEGY · </div>
                     </div>
-                </div>
-                <div class="award-card">
-                    <div class="award-icon"><i class="fas fa-star"></i></div>
-                    <div class="award-info">
-                        <h4>湖南省大学生工业设计竞赛</h4>
-                        <span class="rank">省级三等奖</span>
-                        <p class="project">作品：DM 编舞灵感器</p>
-                    </div>
-                </div>
-                <div class="award-card">
-                    <div class="award-icon"><i class="fas fa-language"></i></div>
-                    <div class="award-info">
-                        <h4>全国大学生英语单词大赛</h4>
-                        <span class="rank">全国初赛三等奖</span>
-                        <p class="project">CET-6: 508分 | CET-4: 444分</p>
-                    </div>
-                </div>
-                <div class="award-card">
-                    <div class="award-icon"><i class="fas fa-pen-nib"></i></div>
-                    <div class="award-info">
-                        <h4>“媒”力全开新媒体大赛</h4>
-                        <span class="rank">平面设计类 二等奖</span>
-                        <p class="project">校级荣誉</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    
+                    <div class="grid-layout">
+                        <div class="col-left">
+                            <div class="col-left">
+                                <h2>My Journey<span class="dot">.</span></h2>
+                                
+                                <div class="edu-card" style="margin-top: 3rem; padding: 2rem; border: 2px solid #0F0F0F; background: #fff;">
+                                    <div style="font-family: 'Syncopate', sans-serif; color: #888; font-size: 0.9rem; margin-bottom: 1rem;">EDUCATION</div>
+                                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 800;">湖南工业大学</h3>
+                                    <p style="font-size: 1.1rem; font-weight: 600;">Hunan University of Technology</p>
+                                    <p style="color: #666; margin-top: 0.5rem;">工业设计 (本科) | 2023 - 2027</p>
+                                    
+                                    <div style="margin-top: 1.5rem; border-top: 1px solid #eee; padding-top: 1rem;">
+                                        <p style="font-size: 0.9rem; color: #444; line-height: 1.8;">
+                                            <i class="fas fa-trophy" style="color: #FF3A1E; margin-right: 8px;"></i> 综测成绩：<strong>专业年级 Top 3</strong><br>
+                                            <i class="fas fa-check-circle" style="color: #FF3A1E; margin-right: 8px;"></i> 核心课程：人机工程学、交互设计、产品思维<br>
+                                            <i class="fas fa-user-tag" style="color: #FF3A1E; margin-right: 8px;"></i> 角色：班长 / 新生班助 / 预备党员
+                                        </p>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-right">
+                            <ul class="stats-list">
+                                <li>
+                                    <span class="num">01</span>
+                                    <div class="info">
+                                        <h3>IDL 实验室主任 (优秀团队)</h3>
+                                        <p>带领团队进行创新创业孵化，负责SaaS产品全流程管理。</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="num">02</span>
+                                    <div class="info">
+                                        <h3>NCDA 国赛获奖</h3>
+                                        <p>MammoEase 医疗产品设计 - 全国总决赛三等奖。</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="num">03</span>
+                                    <div class="info">
+                                        <h3>CET-6 (508分)</h3>
+                                        <p>2023~2024年通过四六级，具备流利的英语阅读能力与国际化产品视野。</p>
+                                    </div>
+                                </li>
+                            </ul>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3>Let's Connect.</h3>
-                    <p>期待与您探讨产品与设计</p>
-                    <a href="mailto:rodin260599@qq.com" class="email-link">rodin260599@qq.com</a>
-                </div>
-            </div>
-            <div class="copyright">© 2025 罗丹 Rodin. Designed & Coded by Myself.</div>
-        </div>
-    </footer>
+                            <div style="margin-top: 4rem;">
+                                <div class="ops-card magnetic-btn" style="background: #F8F8F8; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; cursor: pointer; transition: transform 0.3s;">
+                                    <div style="color: #FF3A1E; font-size: 2rem; margin-bottom: 1rem;"><i class="fab fa-app-store-ios"></i></div>
+                                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 700;">独立上架 & ASO 增长</h4>
+                                    <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">具备 <strong>iOS App Store 独立上架</strong> 经验，熟悉提审流程。结合 SEO/ASO 策略优化元数据，打通产品落地的“最后一公里”。</p>
+                                </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+                                <div class="skill-tags-cloud" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                    <span>Figma</span><span>MasterGo</span>
+                                    <span>Cursor (AI Coding)</span> <span>App Store Connect</span> 
+                                    <span>HTML/CSS/JS</span>
+                                    <span>Midjourney</span><span>Stable Diffusion</span>
+                                    <span>SEO/ASO Strategy</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="footer-section">
+                <div class="container">
+                    <div class="footer-title">Let's Talk.</div>
+                    <a href="mailto:rodin260599@qq.com" class="footer-email magnetic-btn">rodin260599@qq.com</a>
+                    <div class="footer-bottom">
+                        <span>© 2025 Rodin Luo</span>
+                        <span>Designed & Coded by 湖南工业大学工业设计23级罗丹</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/project-detail.js"></script>
     <script src="js/script.js"></script>
 </body>

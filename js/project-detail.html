@@ -2,46 +2,58 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>项目详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Syncopate:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* 详情页专用简易样式 */
-        .detail-hero { padding: 120px 0 60px; text-align: center; background: #fff; }
-        .detail-img { width: 100%; border-radius: 12px; margin: 40px 0; }
-        .detail-content { max-width: 800px; margin: 0 auto; }
-        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: 600; }
+        /* 详情页专用样式补充 */
+        .detail-nav { padding: 2rem 3rem; position: fixed; top:0; width:100%; z-index:100; background:white;}
+        .back-link { font-weight: 700; text-decoration: none; color: var(--black); font-size: 1.2rem; }
+        .detail-hero { padding: 10rem 3rem 4rem; }
+        .d-title { font-family: var(--font-display); font-size: 4rem; line-height: 1.1; margin-bottom: 2rem; }
+        .d-meta { display: flex; gap: 2rem; margin-bottom: 4rem; border-top: 1px solid #eee; padding-top: 2rem; }
+        .meta-item h4 { font-size: 0.9rem; color: var(--gray); margin-bottom: 0.5rem; }
+        .d-main-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 4rem; }
+        .d-content { max-width: 800px; margin: 0 auto; font-size: 1.2rem; line-height: 1.8; }
+        .d-content h3 { margin-top: 3rem; margin-bottom: 1rem; font-size: 1.8rem; }
+        .d-gallery { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 4rem; }
+        .d-gallery img { width: 100%; border-radius: 8px; }
+        @media(max-width:768px){ .d-title{font-size: 2.5rem;} .detail-hero{padding: 6rem 1.5rem;} }
     </style>
 </head>
 <body>
-    <div class="cursor"></div>
     
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">RODIN.DESIGN</div>
-            <a href="index.html" class="back-btn">← 返回首页</a>
-        </div>
+    <nav class="detail-nav">
+        <a href="index.html" class="back-link">← BACK</a>
     </nav>
 
     <section class="detail-hero">
-        <div class="container detail-content">
-            <h1 id="p-title">加载中...</h1>
-            <p id="p-subtitle" style="color: #666; font-size: 1.2rem;"></p>
-            <div id="p-tags" style="margin-top: 20px;"></div>
-            <img id="p-img" src="" class="detail-img">
-            
-            <div class="project-body" style="text-align: left; line-height: 1.8;">
-                <h3>项目背景</h3>
-                <p id="p-desc"></p>
-                <br>
-                <h3>核心展示</h3>
-                <p>（更多详细设计过程与数据请参考项目文档或线下沟通）</p>
+        <h1 class="d-title" id="p-title">Loading...</h1>
+        
+        <div class="d-meta">
+            <div class="meta-item">
+                <h4>CATEGORY</h4>
+                <p id="p-cat">-</p>
             </div>
+            <div class="meta-item">
+                <h4>ROLE</h4>
+                <p id="p-role">-</p>
+            </div>
+        </div>
+
+        <img src="" id="p-img" class="d-main-img">
+
+        <div class="d-content">
+            <h3>Project Background</h3>
+            <p id="p-desc"></p>
+            
+            <div id="p-gallery" class="d-gallery"></div>
         </div>
     </section>
 
     <script src="js/project-detail.js"></script>
     <script>
-        // 简单的详情页渲染逻辑
         const params = new URLSearchParams(window.location.search);
         const cat = params.get('cat');
         const id = params.get('id');
@@ -49,9 +61,20 @@
         if(cat && id && window.projectsData[cat][id]) {
             const p = window.projectsData[cat][id];
             document.getElementById('p-title').innerText = p.title;
-            document.getElementById('p-subtitle').innerText = p.subtitle;
+            document.getElementById('p-cat').innerText = p.category;
+            document.getElementById('p-role').innerText = p.role;
             document.getElementById('p-desc').innerText = p.background || p.desc;
             document.getElementById('p-img').src = p.mainImage;
+
+            // 渲染更多图片
+            if(p.gallery) {
+                const galleryDiv = document.getElementById('p-gallery');
+                p.gallery.forEach(img => {
+                    const i = document.createElement('img');
+                    i.src = img.image;
+                    galleryDiv.appendChild(i);
+                });
+            }
         }
     </script>
 </body>
