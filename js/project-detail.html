@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>项目详情</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 详情页专用简易样式 */
+        .detail-hero { padding: 120px 0 60px; text-align: center; background: #fff; }
+        .detail-img { width: 100%; border-radius: 12px; margin: 40px 0; }
+        .detail-content { max-width: 800px; margin: 0 auto; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">RODIN.DESIGN</div>
+            <a href="index.html" class="back-btn">← 返回首页</a>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="container detail-content">
+            <h1 id="p-title">加载中...</h1>
+            <p id="p-subtitle" style="color: #666; font-size: 1.2rem;"></p>
+            <div id="p-tags" style="margin-top: 20px;"></div>
+            <img id="p-img" src="" class="detail-img">
+            
+            <div class="project-body" style="text-align: left; line-height: 1.8;">
+                <h3>项目背景</h3>
+                <p id="p-desc"></p>
+                <br>
+                <h3>核心展示</h3>
+                <p>（更多详细设计过程与数据请参考项目文档或线下沟通）</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/project-detail.js"></script>
+    <script>
+        // 简单的详情页渲染逻辑
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('cat');
+        const id = params.get('id');
+        
+        if(cat && id && window.projectsData[cat][id]) {
+            const p = window.projectsData[cat][id];
+            document.getElementById('p-title').innerText = p.title;
+            document.getElementById('p-subtitle').innerText = p.subtitle;
+            document.getElementById('p-desc').innerText = p.background || p.desc;
+            document.getElementById('p-img').src = p.mainImage;
+        }
+    </script>
+</body>
+</html>
